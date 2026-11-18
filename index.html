@@ -459,7 +459,7 @@
       position: relative;
       overflow: hidden;
       background: var(--bk);
-      aspect-ratio: 1920/800
+      aspect-ratio: 1024/470;
     }
 
     .hero-arrow {
@@ -598,8 +598,8 @@
 
     @media(max-width:999px) {
       .hero {
-        aspect-ratio: 768/1024;
-        max-height: 85vh
+        aspect-ratio: 850/1024;
+        max-height: 88vh;
       }
     }
 
@@ -3216,22 +3216,18 @@
   </nav>
 
   <section class="hero" id="hero">
-    <a class="sl on" href="#shop" onclick="tab('him')">
+    <!-- Slide 1: Kings Collection (For Him) -->
+    <a class="sl on" href="#shop" onclick="tab('him')" aria-label="Kings Collection - For Him">
       <picture>
-        <source media="(min-width:768px)" srcset="asset/Men Banner pc.png">
-        <img src="asset/hero-men-mobile.webp" alt="Kings Collection - Men's Fine Fragrances" fetchpriority="high">
+        <source media="(min-width:768px)" srcset="asset/hero-kings-desktop.jpg">
+        <img src="asset/hero-kings-mobile.webp" alt="The Wait Is Over - Kings Collection" fetchpriority="high">
       </picture>
     </a>
-    <a class="sl" href="#shop" onclick="tab('her')">
+    <!-- Slide 2: Queens Collection (For Her) -->
+    <a class="sl" href="#shop" onclick="tab('her')" aria-label="Queens Collection - For Her">
       <picture>
-        <source media="(min-width:768px)" srcset="asset/Women banner.png">
-        <img src="asset/hero-women-mobile.webp" alt="Queens Collection - Royal Perfumes" loading="lazy">
-      </picture>
-    </a>
-    <a class="sl" href="#shop" onclick="tab('discovery')">
-      <picture>
-        <source media="(min-width:768px)" srcset="asset/hero-banner-desktop-02.webp">
-        <img src="asset/hero-banner-mobile-02.webp" alt="The Royal Discovery Set" loading="lazy">
+        <source media="(min-width:768px)" srcset="asset/hero-queens-desktop.jpg">
+        <img src="asset/hero-queens-mobile.webp" alt="Timeless Elegance - Queens Collection" loading="lazy">
       </picture>
     </a>
     <button class="hero-arrow hero-prev" aria-label="Previous slide" onclick="heroStep(-1)"><svg viewBox="0 0 24 24">
