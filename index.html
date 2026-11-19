@@ -203,13 +203,13 @@
     }
 
     .logo img {
-      height: 40px;
+      height: 60px;
       width: auto;
       transition: height .3s
     }
 
     .hd.sc .logo img {
-      height: 32px
+      height: 48px
     }
 
     .nav {
@@ -793,6 +793,7 @@
         margin: 0 !important;
         padding: 0 !important;
       }
+
       .rail {
         display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important;
@@ -801,12 +802,14 @@
         padding: 12px 0 24px !important;
         width: 100% !important;
       }
+
       .cd {
         width: 100% !important;
         max-width: 100% !important;
         flex: none !important;
         box-sizing: border-box !important;
       }
+
       .ar {
         display: none !important;
       }
@@ -817,6 +820,7 @@
         margin: 0 -16px;
         padding: 0 16px;
       }
+
       .rail {
         display: flex !important;
         gap: 16px !important;
@@ -826,9 +830,11 @@
         scrollbar-width: none !important;
         padding: 10px 4px 20px !important;
       }
+
       .rail::-webkit-scrollbar {
         display: none !important;
       }
+
       .cd {
         flex: 0 0 calc(84vw - 20px) !important;
         width: calc(84vw - 20px) !important;
@@ -836,6 +842,7 @@
         scroll-snap-align: center !important;
         box-sizing: border-box !important;
       }
+
       .ar {
         display: none !important;
       }
@@ -851,6 +858,7 @@
       transform: none !important;
       position: relative;
     }
+
     .cd:hover {
       border-color: #D4AF37 !important;
       transform: none !important;
@@ -3146,242 +3154,287 @@
         letter-spacing: 0.04em;
       }
     }
-  
-  /* ===== FULL-WIDTH COLLECTION DUO (1 ROW, 2 COLUMNS) ===== */
-  .collection-full {
-    width: 100%;
-    background: #000000;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-  .collection-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
-    margin: 0;
-    gap: 0;
-  }
-  .collection-item {
-    position: relative;
-    overflow: hidden;
-    display: block;
-    width: 100%;
-    background: #000000;
-  }
-  .collection-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: opacity 0.3s ease;
-  }
-  .collection-item:hover img {
-    opacity: 0.92;
-  }
-  @media(max-width: 768px) {
-    .collection-grid {
-      grid-template-columns: 1fr;
-    }
-  }
 
-
-  /* Smooth Add to Cart Animations */
-  @keyframes cartBadgeBounce {
-    0% { transform: scale(1); }
-    40% { transform: scale(1.4); }
-    100% { transform: scale(1); }
-  }
-  .cb.cn.pulse {
-    animation: cartBadgeBounce 0.45s ease-out;
-  }
-  @keyframes cartItemHighlight {
-    0% { background: rgba(212, 175, 55, 0.4); border-color: #D4AF37; }
-    50% { background: rgba(212, 175, 55, 0.15); }
-    100% { background: transparent; border-color: rgba(255, 255, 255, 0.08); }
-  }
-  .ci.newly-added {
-    animation: cartItemHighlight 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  }
-
-
-  /* Brand New Luxury Mobile Fragrance Deck */
-  .fs-mob-container {
-    display: none;
-  }
-  @media(max-width: 860px) {
-    .fs-mob-container {
-      display: block !important;
-      padding: 0 16px 36px;
-      max-width: 500px;
-      margin: 0 auto;
-    }
-    .fs-mob-gender-nav {
-      display: flex;
-      gap: 10px;
-      background: #111111;
-      padding: 5px;
-      border-radius: 6px;
-      border: 1px solid rgba(212, 175, 55, 0.25);
-      margin-bottom: 18px;
-    }
-    .fs-mob-gender-btn {
-      flex: 1;
-      padding: 10px 14px;
-      background: transparent;
-      border: none;
-      border-radius: 4px;
-      font-family: 'Poppins', sans-serif;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.6);
-      cursor: pointer;
-      transition: all 0.25s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
-    .fs-mob-gender-btn.active {
-      background: linear-gradient(135deg, #ECC880 0%, #D4AF37 50%, #AA8022 100%);
-      color: #000000;
-      box-shadow: 0 4px 14px rgba(212, 175, 55, 0.35);
-    }
-    .fs-mob-deck {
-      position: relative;
-      border-radius: 6px;
-      border: 1px solid rgba(212, 175, 55, 0.25);
-      background: #141414;
-      overflow: hidden;
-      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.85);
-    }
-    .fs-mob-img-hero {
-      position: relative;
+    /* ===== FULL-WIDTH COLLECTION DUO (1 ROW, 2 COLUMNS) ===== */
+    .collection-full {
       width: 100%;
-      height: 290px;
-      background: #FFFFFF !important;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      box-shadow: none !important;
-    }
-    .fs-mob-img-hero img {
-      max-height: 250px;
-      max-width: 90%;
-      object-fit: contain;
-      filter: none !important;
-      background: #FFFFFF !important;
-      transition: opacity 0.25s ease;
-    }
-    .fs-mob-badge-top {
-      position: absolute;
-      top: 14px;
-      left: 14px;
       background: #000000;
-      color: #D4AF37;
-      border: 1px solid #D4AF37;
-      border-radius: 3px;
-      font-family: 'Poppins', sans-serif;
-      font-size: 10.5px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 4px 10px;
-      z-index: 2;
-    }
-    .fs-mob-step-top {
-      position: absolute;
-      top: 14px;
-      right: 14px;
-      color: #333333;
-      font-family: 'Manrope', sans-serif;
-      font-weight: 800;
-      font-size: 13px;
-      letter-spacing: 0.05em;
-      z-index: 2;
-    }
-    .fs-mob-body {
-      padding: 22px 18px 24px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 10px;
-      background: #141414;
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
-    }
-    .fs-mob-title {
-      font-family: 'Manrope', sans-serif;
-      font-size: 24px;
-      font-weight: 700;
-      color: #FFFFFF;
+      padding: 0;
       margin: 0;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
-    .fs-mob-notes-pill {
-      display: inline-block;
-      padding: 4px 12px;
-      background: rgba(212, 175, 55, 0.12);
-      border: 1px solid rgba(212, 175, 55, 0.3);
-      border-radius: 20px;
-      color: #ECC880;
-      font-size: 11.5px;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-    }
-    .fs-mob-desc {
-      font-size: 13px;
-      line-height: 1.6;
-      color: rgba(255, 255, 255, 0.7);
+
+    .collection-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 100%;
       margin: 0;
-      max-width: 90%;
+      gap: 0;
     }
-    .fs-mob-nav-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 16px;
-      padding: 0 4px;
+
+    .collection-item {
+      position: relative;
+      overflow: hidden;
+      display: block;
+      width: 100%;
+      background: #000000;
     }
-    .fs-mob-nav-arrow {
-      width: 44px;
-      height: 44px;
-      border-radius: 4px;
-      border: 1px solid rgba(212, 175, 55, 0.35);
-      background: #1A1A1A;
-      color: #D4AF37;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: all 0.2s;
+
+    .collection-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: opacity 0.3s ease;
     }
-    .fs-mob-nav-arrow:active {
-      background: #D4AF37;
-      color: #000000;
+
+    .collection-item:hover img {
+      opacity: 0.92;
     }
-    .fs-mob-dots-row {
-      display: flex;
-      gap: 8px;
-      align-items: center;
+
+    @media(max-width: 768px) {
+      .collection-grid {
+        grid-template-columns: 1fr;
+      }
     }
-    .fs-mob-page-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 2px;
-      background: rgba(255, 255, 255, 0.2);
-      border: none;
-      cursor: pointer;
-      transition: all 0.25s ease;
+
+
+    /* Smooth Add to Cart Animations */
+    @keyframes cartBadgeBounce {
+      0% {
+        transform: scale(1);
+      }
+
+      40% {
+        transform: scale(1.4);
+      }
+
+      100% {
+        transform: scale(1);
+      }
     }
-    .fs-mob-page-dot.active {
-      width: 24px;
-      background: #D4AF37;
+
+    .cb.cn.pulse {
+      animation: cartBadgeBounce 0.45s ease-out;
     }
-  }
+
+    @keyframes cartItemHighlight {
+      0% {
+        background: rgba(212, 175, 55, 0.4);
+        border-color: #D4AF37;
+      }
+
+      50% {
+        background: rgba(212, 175, 55, 0.15);
+      }
+
+      100% {
+        background: transparent;
+        border-color: rgba(255, 255, 255, 0.08);
+      }
+    }
+
+    .ci.newly-added {
+      animation: cartItemHighlight 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+
+    /* Brand New Luxury Mobile Fragrance Deck */
+    .fs-mob-container {
+      display: none;
+    }
+
+    @media(max-width: 860px) {
+      .fs-mob-container {
+        display: block !important;
+        padding: 0 16px 36px;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .fs-mob-gender-nav {
+        display: flex;
+        gap: 10px;
+        background: #111111;
+        padding: 5px;
+        border-radius: 6px;
+        border: 1px solid rgba(212, 175, 55, 0.25);
+        margin-bottom: 18px;
+      }
+
+      .fs-mob-gender-btn {
+        flex: 1;
+        padding: 10px 14px;
+        background: transparent;
+        border: none;
+        border-radius: 4px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.6);
+        cursor: pointer;
+        transition: all 0.25s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      .fs-mob-gender-btn.active {
+        background: linear-gradient(135deg, #ECC880 0%, #D4AF37 50%, #AA8022 100%);
+        color: #000000;
+        box-shadow: 0 4px 14px rgba(212, 175, 55, 0.35);
+      }
+
+      .fs-mob-deck {
+        position: relative;
+        border-radius: 6px;
+        border: 1px solid rgba(212, 175, 55, 0.25);
+        background: #141414;
+        overflow: hidden;
+        box-shadow: 0 14px 40px rgba(0, 0, 0, 0.85);
+      }
+
+      .fs-mob-img-hero {
+        position: relative;
+        width: 100%;
+        height: 290px;
+        background: #FFFFFF !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        box-shadow: none !important;
+      }
+
+      .fs-mob-img-hero img {
+        max-height: 250px;
+        max-width: 90%;
+        object-fit: contain;
+        filter: none !important;
+        background: #FFFFFF !important;
+        transition: opacity 0.25s ease;
+      }
+
+      .fs-mob-badge-top {
+        position: absolute;
+        top: 14px;
+        left: 14px;
+        background: #000000;
+        color: #D4AF37;
+        border: 1px solid #D4AF37;
+        border-radius: 3px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 10.5px;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 4px 10px;
+        z-index: 2;
+      }
+
+      .fs-mob-step-top {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        color: #333333;
+        font-family: 'Manrope', sans-serif;
+        font-weight: 800;
+        font-size: 13px;
+        letter-spacing: 0.05em;
+        z-index: 2;
+      }
+
+      .fs-mob-body {
+        padding: 22px 18px 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+        background: #141414;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .fs-mob-title {
+        font-family: 'Manrope', sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        color: #FFFFFF;
+        margin: 0;
+      }
+
+      .fs-mob-notes-pill {
+        display: inline-block;
+        padding: 4px 12px;
+        background: rgba(212, 175, 55, 0.12);
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        border-radius: 20px;
+        color: #ECC880;
+        font-size: 11.5px;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+      }
+
+      .fs-mob-desc {
+        font-size: 13px;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.7);
+        margin: 0;
+        max-width: 90%;
+      }
+
+      .fs-mob-nav-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 16px;
+        padding: 0 4px;
+      }
+
+      .fs-mob-nav-arrow {
+        width: 44px;
+        height: 44px;
+        border-radius: 4px;
+        border: 1px solid rgba(212, 175, 55, 0.35);
+        background: #1A1A1A;
+        color: #D4AF37;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .fs-mob-nav-arrow:active {
+        background: #D4AF37;
+        color: #000000;
+      }
+
+      .fs-mob-dots-row {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+
+      .fs-mob-page-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 2px;
+        background: rgba(255, 255, 255, 0.2);
+        border: none;
+        cursor: pointer;
+        transition: all 0.25s ease;
+      }
+
+      .fs-mob-page-dot.active {
+        width: 24px;
+        background: #D4AF37;
+      }
+    }
 
 
     /* ============================================================
@@ -3402,10 +3455,12 @@
       justify-content: center;
       padding: 16px;
     }
+
     .qv-overlay.active {
       opacity: 1;
       pointer-events: auto;
     }
+
     .qv-modal {
       background: #1A1A1A;
       border: 1px solid rgba(212, 175, 55, 0.25);
@@ -3421,9 +3476,11 @@
       transform: scale(0.96) translateY(12px);
       transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
+
     .qv-overlay.active .qv-modal {
       transform: scale(1) translateY(0);
     }
+
     .qv-close {
       position: absolute;
       top: 16px;
@@ -3442,11 +3499,13 @@
       z-index: 10;
       transition: all 0.2s ease;
     }
+
     .qv-close:hover {
       background: #D4AF37;
       color: #000000;
       transform: none !important;
     }
+
     .qv-media {
       background: #FFFFFF !important;
       display: flex;
@@ -3455,12 +3514,14 @@
       padding: 32px 24px;
       border-right: 1px solid rgba(255, 255, 255, 0.06);
     }
+
     .qv-media img {
       max-width: 100%;
       max-height: 420px;
       object-fit: contain;
       filter: none !important;
     }
+
     .qv-content {
       padding: 36px 32px;
       display: flex;
@@ -3468,6 +3529,7 @@
       gap: 16px;
       color: #FFFFFF;
     }
+
     .qv-sub {
       font-family: 'Poppins', sans-serif;
       font-size: 12px;
@@ -3475,6 +3537,7 @@
       text-transform: uppercase;
       color: rgba(255, 255, 255, 0.55);
     }
+
     .qv-title {
       font-family: 'Manrope', sans-serif;
       font-size: 30px;
@@ -3483,6 +3546,7 @@
       margin: 0;
       line-height: 1.2;
     }
+
     .qv-rating {
       display: flex;
       align-items: center;
@@ -3491,28 +3555,33 @@
       color: #D4AF37;
       font-weight: 500;
     }
+
     .qv-prices {
       display: flex;
       align-items: baseline;
       gap: 10px;
       margin-top: 4px;
     }
+
     .qv-price-now {
       font-family: 'Manrope', sans-serif;
       font-size: 26px;
       font-weight: 800;
       color: #FFFFFF;
     }
+
     .qv-price-old {
       font-size: 16px;
       color: #777777;
       text-decoration: line-through;
     }
+
     .qv-price-off {
       font-size: 13px;
       font-weight: 600;
       color: #D4AF37;
     }
+
     .qv-opt-label {
       font-size: 12px;
       text-transform: uppercase;
@@ -3520,10 +3589,12 @@
       color: rgba(255, 255, 255, 0.6);
       margin-bottom: 6px;
     }
+
     .qv-sizes {
       display: flex;
       gap: 10px;
     }
+
     .qv-size-btn {
       padding: 9px 20px;
       background: #000000;
@@ -3536,16 +3607,19 @@
       cursor: pointer;
       transition: all 0.2s ease;
     }
+
     .qv-size-btn.active {
       border-color: #D4AF37;
       box-shadow: 0 0 0 1px #D4AF37;
       color: #FFFFFF;
     }
+
     .qv-actions-row {
       display: flex;
       gap: 12px;
       margin-top: 8px;
     }
+
     .qv-qty {
       display: inline-flex;
       align-items: center;
@@ -3554,6 +3628,7 @@
       border-radius: 4px;
       padding: 0 8px;
     }
+
     .qv-qty button {
       background: none;
       border: none;
@@ -3566,12 +3641,14 @@
       align-items: center;
       justify-content: center;
     }
+
     .qv-qty span {
       width: 28px;
       text-align: center;
       font-weight: 600;
       font-size: 14px;
     }
+
     .qv-add-btn {
       flex: 1;
       background: linear-gradient(135deg, #ECC880 0%, #D4AF37 50%, #AA8022 100%);
@@ -3591,18 +3668,22 @@
       justify-content: center;
       gap: 8px;
     }
+
     .qv-add-btn:hover {
       box-shadow: 0 6px 20px rgba(212, 175, 55, 0.45);
       transform: none !important;
     }
+
     .qv-accs {
       border-top: 1px solid rgba(255, 255, 255, 0.08);
       margin-top: 10px;
       padding-top: 10px;
     }
+
     .qv-acc-item {
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
+
     .qv-acc-trigger {
       width: 100%;
       background: none;
@@ -3618,10 +3699,12 @@
       cursor: pointer;
       text-align: left;
     }
+
     .qv-acc-trigger span:last-child {
       color: #D4AF37;
       font-size: 16px;
     }
+
     .qv-acc-body {
       padding: 0 0 12px 0;
       font-size: 12.5px;
@@ -3629,25 +3712,31 @@
       color: rgba(255, 255, 255, 0.7);
       display: none;
     }
+
     .qv-acc-item.open .qv-acc-body {
       display: block;
     }
+
     @media(max-width: 768px) {
       .qv-modal {
         grid-template-columns: 1fr;
         max-height: 92vh;
       }
+
       .qv-media {
         border-right: none;
         border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         padding: 24px;
       }
+
       .qv-media img {
         max-height: 240px;
       }
+
       .qv-content {
         padding: 20px;
       }
+
       .qv-title {
         font-size: 22px;
       }
@@ -3655,16 +3744,21 @@
 
 
     /* Clean Site Max-Width Containment */
-    .wrap, .fq, .fg, .bb {
+    .wrap,
+    .fq,
+    .fg,
+    .bb {
       max-width: 1240px !important;
       margin-left: auto !important;
       margin-right: auto !important;
       width: 100% !important;
     }
+
     .sec {
       padding-left: 24px;
       padding-right: 24px;
     }
+
     @media(max-width: 768px) {
       .sec {
         padding-left: 16px;
@@ -3677,6 +3771,7 @@
     .rw-mob-nav {
       display: none;
     }
+
     @media(max-width: 860px) {
       .rw-mob-nav {
         display: flex;
@@ -3685,6 +3780,7 @@
         gap: 16px;
         margin-top: 14px;
       }
+
       .rw-mob-arrow {
         width: 44px;
         height: 44px;
@@ -3698,69 +3794,10 @@
         cursor: pointer;
         transition: all 0.2s;
       }
+
       .rw-mob-arrow:active {
         background: #D4AF37;
         color: #000000;
-      }
-    }
-
-
-    /* ============================================================
-       ABOUT US (THE ROYAL ATELIER): FULL WIDTH EDGE-TO-EDGE
-    ============================================================ */
-    .fs-story {
-      width: 100% !important;
-      max-width: 100% !important;
-      background: #0D0D0D !important;
-      border-top: 1px solid rgba(212, 175, 55, 0.2) !important;
-      border-bottom: 1px solid rgba(212, 175, 55, 0.2) !important;
-      padding: 0 !important;
-      margin: 0 !important;
-      overflow: hidden !important;
-    }
-    .fs-story-inner {
-      width: 100% !important;
-      max-width: 100% !important;
-      margin: 0 !important;
-      padding: 0 !important;
-      display: grid !important;
-      grid-template-columns: 1fr 1fr !important;
-      align-items: stretch !important;
-    }
-    .fs-story-content {
-      padding: clamp(48px, 6vw, 100px) clamp(30px, 5vw, 85px) !important;
-      display: flex !important;
-      flex-direction: column !important;
-      justify-content: center !important;
-      background: #0D0D0D !important;
-    }
-    .fs-story-media {
-      width: 100% !important;
-      height: 100% !important;
-      min-height: 620px !important;
-      position: relative !important;
-      overflow: hidden !important;
-      border-radius: 0 !important;
-      margin: 0 !important;
-      padding: 0 !important;
-      background: #000000 !important;
-    }
-    .fs-story-media img {
-      width: 100% !important;
-      height: 100% !important;
-      min-height: 620px !important;
-      object-fit: cover !important;
-      display: block !important;
-      border-radius: 0 !important;
-    }
-    @media(max-width: 860px) {
-      .fs-story-inner {
-        grid-template-columns: 1fr !important;
-      }
-      .fs-story-media,
-      .fs-story-media img {
-        min-height: 420px !important;
-        max-height: 500px !important;
       }
     }
 
@@ -3775,18 +3812,21 @@
       padding: 0 !important;
       background: #000000 !important;
     }
+
     .fs-hd {
       max-width: 1240px !important;
       margin: 0 auto 30px !important;
       padding: 60px 20px 0 !important;
       text-align: center !important;
     }
+
     .fs-track {
       width: 100% !important;
       max-width: 100% !important;
       margin: 0 !important;
       padding: 0 !important;
     }
+
     .fs-stage {
       width: 100% !important;
       max-width: 100% !important;
@@ -3797,12 +3837,14 @@
       height: calc(100vh - var(--hh, 64px)) !important;
       min-height: 580px !important;
     }
+
     .fs-img {
       width: 100% !important;
       height: 100% !important;
       background: #FFFFFF !important;
       position: relative !important;
     }
+
     .fs-img img {
       width: 100% !important;
       height: 100% !important;
@@ -3810,6 +3852,7 @@
       object-fit: contain !important;
       background: #FFFFFF !important;
     }
+
     .fs-list {
       width: 100% !important;
       padding: clamp(30px, 4vw, 60px) clamp(30px, 5vw, 90px) !important;
@@ -3819,11 +3862,137 @@
       background: #0A0A0A !important;
       border-left: 1px solid rgba(212, 175, 55, 0.2) !important;
     }
+
     @media(max-width: 860px) {
+
       .fs-track,
       .fs-stage {
         display: none !important;
       }
+    }
+  
+    /* ============================================================
+       OUR STORY / THE ROYAL ATELIER (FULL WIDTH & HIGH IMAGE)
+    ============================================================ */
+    .fs-story {
+      width: 100% !important;
+      max-width: 100% !important;
+      background: #0D0D0D !important;
+      border-top: 1px solid rgba(212, 175, 55, 0.2) !important;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.2) !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      overflow: visible !important;
+    }
+    .fs-story-inner {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      display: grid !important;
+      grid-template-columns: 1fr 1fr !important;
+      align-items: stretch !important;
+      min-height: 720px !important;
+      max-height: none !important;
+    }
+    .fs-story-content {
+      padding: clamp(60px, 7vw, 110px) clamp(30px, 6vw, 95px) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: center !important;
+      background: #0D0D0D !important;
+      box-sizing: border-box !important;
+    }
+    .fs-story-content h2 {
+      font-family: 'Manrope', sans-serif !important;
+      font-weight: 700 !important;
+      font-size: clamp(30px, 3.8vw, 46px) !important;
+      line-height: 1.15 !important;
+      color: #FFFFFF !important;
+      margin: 16px 0 16px !important;
+    }
+    .fs-story-lead {
+      font-family: 'Poppins', sans-serif !important;
+      font-size: 17px !important;
+      font-weight: 500 !important;
+      color: #D4AF37 !important;
+      margin-bottom: 14px !important;
+    }
+    .fs-story-content p {
+      font-family: 'Poppins', sans-serif !important;
+      font-size: 15px !important;
+      line-height: 1.8 !important;
+      color: #CCCCCC !important;
+      margin-bottom: 16px !important;
+      max-width: 52ch !important;
+    }
+    .fs-story-media {
+      width: 100% !important;
+      height: 100% !important;
+      min-height: 720px !important;
+      position: relative !important;
+      overflow: hidden !important;
+      border-radius: 0 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      background: #000000 !important;
+    }
+    .fs-story-media img {
+      width: 100% !important;
+      height: 100% !important;
+      min-height: 720px !important;
+      object-fit: cover !important;
+      object-position: center !important;
+      display: block !important;
+      border-radius: 0 !important;
+    }
+    @media(max-width: 920px) {
+      .fs-story-inner {
+        display: flex !important;
+        flex-direction: column !important;
+        min-height: auto !important;
+        max-height: none !important;
+      }
+      .fs-story-content {
+        padding: 50px 24px 54px !important;
+        order: 1 !important;
+      }
+      .fs-story-media {
+        order: 2 !important;
+        min-height: 480px !important;
+        height: 520px !important;
+        max-height: 560px !important;
+      }
+      .fs-story-media img {
+        min-height: 480px !important;
+        height: 100% !important;
+      }
+    }
+
+
+    /* Luxury Cart Drawer Custom Scrollbar */
+    .kc-b {
+      scrollbar-width: thin !important;
+      scrollbar-color: rgba(212, 175, 55, 0.35) transparent !important;
+    }
+    .kc-b::-webkit-scrollbar {
+      width: 5px !important;
+    }
+    .kc-b::-webkit-scrollbar-track {
+      background: transparent !important;
+    }
+    .kc-b::-webkit-scrollbar-thumb {
+      background: rgba(212, 175, 55, 0.35) !important;
+      border-radius: 4px !important;
+    }
+    .kc-b::-webkit-scrollbar-thumb:hover {
+      background: #D4AF37 !important;
+    }
+    .kc {
+      scrollbar-width: none !important;
+    }
+    .kc::-webkit-scrollbar {
+      display: none !important;
     }
 
 </style>
@@ -3831,7 +4000,8 @@
 
 <body>
 
-  <div class="ann"><a href="#shop" onclick="tab('him')">HANDCRAFTED IN PERTH, WESTERN AUSTRALIA · DISCOVER KINGS &amp; QUEENS</a></div>
+  <div class="ann"><a href="#shop" onclick="tab('him')">HANDCRAFTED IN PERTH, WESTERN AUSTRALIA · DISCOVER KINGS &amp;
+      QUEENS</a></div>
 
   <div class="hw">
     <header class="hd" id="hd">
@@ -3858,7 +4028,7 @@
             </svg></button>
           <button class="ib" aria-label="Cart" onclick="openCart(true)"><svg viewBox="0 0 24 24">
               <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0" />
-            </svg><span class="cb cn">1</span></button>
+            </svg><span class="cb cn" style="display:none">0</span></button>
         </div>
         <div class="sd" id="sd">
           <form class="sf" onsubmit="event.preventDefault();search($('sq').value)"><input id="sq" type="search"
@@ -3880,7 +4050,7 @@
             </svg></button>
           <button class="ib" aria-label="Cart" onclick="openCart(true)"><svg viewBox="0 0 24 24">
               <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0" />
-            </svg><span class="cb cn">1</span></button>
+            </svg><span class="cb cn" style="display:none">0</span></button>
         </div>
       </div>
     </header>
@@ -3901,7 +4071,7 @@
     <a class="l" href="#shop" onclick="drawer(false);tab('him')">MEN</a>
     <a class="l" href="#story" onclick="drawer(false)">ABOUT</a>
     <a class="l" href="#contact" onclick="drawer(false)">CONTACT US</a>
-    <div class="dr-f">Handcrafted Extrait 40% · Perth, Western Australia<br>Free shipping across Australia on A$150+
+    <div class="dr-f">Handcrafted Extrait 40% · Perth, Western Australia<br>Handcrafted Extrait 40% · Perth, Western Australia
     </div>
   </nav>
 
@@ -3929,20 +4099,24 @@
     <div class="dots"></div>
   </section>
 
-    <section class="collection-full" id="collection" aria-label="Our Royal Collections">
+  <section class="collection-full" id="collection" aria-label="Our Royal Collections">
     <div style="text-align:center;padding:55px 20px 28px;background:#000000;">
-      <small style="color:#D4AF37;text-transform:uppercase;letter-spacing:0.18em;font-size:12px;font-weight:700;font-family:'Poppins',sans-serif;">The Royal Selection</small>
-      <h2 style="font-family:'Manrope',sans-serif;font-size:clamp(28px, 3.5vw, 42px);font-weight:700;color:#FFFFFF;margin-top:8px;letter-spacing:-0.01em;">Our Collection</h2>
+      <small
+        style="color:#D4AF37;text-transform:uppercase;letter-spacing:0.18em;font-size:12px;font-weight:700;font-family:'Poppins',sans-serif;">The
+        Royal Selection</small>
+      <h2
+        style="font-family:'Manrope',sans-serif;font-size:clamp(28px, 3.5vw, 42px);font-weight:700;color:#FFFFFF;margin-top:8px;letter-spacing:-0.01em;">
+        Our Collection</h2>
     </div>
-  <div class="collection-grid">
-    <a class="collection-item" href="#shop" onclick="tab('him')" aria-label="Kings Collection - For Him">
-      <img src="asset/collection-him.webp" alt="Him - Bold scents that make a statement" loading="lazy">
-    </a>
-    <a class="collection-item" href="#shop" onclick="tab('her')" aria-label="Queens Collection - For Her">
-      <img src="asset/collection-her.webp" alt="Her - Iconic scents you crave" loading="lazy">
-    </a>
-  </div>
-</section>
+    <div class="collection-grid">
+      <a class="collection-item" href="#shop" onclick="tab('him')" aria-label="Kings Collection - For Him">
+        <img src="asset/collection-him.webp" alt="Him - Bold scents that make a statement" loading="lazy">
+      </a>
+      <a class="collection-item" href="#shop" onclick="tab('her')" aria-label="Queens Collection - For Her">
+        <img src="asset/collection-her.webp" alt="Her - Iconic scents you crave" loading="lazy">
+      </a>
+    </div>
+  </section>
 
   <section class="sec" id="shop"
     style="border-top:1px solid rgba(255,255,255,0.14);border-bottom:1px solid rgba(255,255,255,0.14);padding:85px 20px 95px;background:#0E0E0E;position:relative;">
@@ -3966,10 +4140,16 @@
       </div>
       <div class="rw-mob-nav">
         <button class="rw-mob-arrow" onclick="slide(-1)" aria-label="Previous product">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
         </button>
         <button class="rw-mob-arrow" onclick="slide(1)" aria-label="Next product">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
         </button>
       </div>
     </div>
@@ -4384,116 +4564,7 @@
       }
     }
 
-    /* ===== COMPACT HEIGHT ABOUT US (OUR STORY / ATELIER) ===== */
-    .fs-story {
-      background: #121212;
-      color: #FFFFFF;
-      border-top: 1px solid #1A1A1A;
-      border-bottom: 1px solid #1A1A1A;
-      padding: 0;
-      font-family: 'Poppins', system-ui, sans-serif;
-      overflow-x: clip;
-      width: 100%;
-    }
-
-    .fs-story-inner {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: stretch;
-      min-height: 440px;
-      max-height: 460px;
-      width: 100%;
-      margin: 0;
-      padding: 0;
-      gap: 0;
-    }
-
-    .fs-story-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: clamp(30px, 4.5vw, 60px) clamp(32px, 5vw, 80px);
-    }
-
-    .fs-story-content h2 {
-      font-family: 'Manrope', sans-serif;
-      font-weight: 700;
-      font-size: clamp(28px, 3.5vw, 42px);
-      line-height: 1.15;
-      color: #FFFFFF;
-      margin: 14px 0 14px;
-    }
-
-    .fs-story-lead {
-      font-family: 'Poppins', sans-serif;
-      font-size: 17px;
-      font-weight: 500;
-      color: #D4AF37;
-      margin-bottom: 12px;
-    }
-
-    .fs-story-content p {
-      font-family: 'Poppins', sans-serif;
-      font-size: 14.5px;
-      line-height: 1.75;
-      color: #CCCCCC;
-      margin-bottom: 12px;
-      max-width: 50ch;
-    }
-
-    .fs-story-media {
-      position: relative;
-      border-radius: 6px;
-      overflow: hidden;
-      min-height: 520px;
-      max-height: 600px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .fs-story-media img {
-      width: 100%;
-      height: 100%;
-      min-height: 520px;
-      max-height: 600px;
-      object-fit: cover;
-      display: block;
-      border-radius: 6px;
-    }
-
-    @media(max-width:860px) {
-      .fs-story-inner {
-        grid-template-columns: 1fr;
-        min-height: auto;
-        max-height: none;
-      }
-
-      .fs-story-content {
-        padding: 36px 20px;
-      }
-
-      .fs-story-media {
-      position: relative;
-      border-radius: 6px;
-      overflow: hidden;
-      min-height: 520px;
-      max-height: 600px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-      .fs-story-media img {
-      width: 100%;
-      height: 100%;
-      min-height: 520px;
-      max-height: 600px;
-      object-fit: cover;
-      display: block;
-      border-radius: 6px;
-    }
-    }
+    
   </style>
 
   <!-- ==================== FIND YOUR SIGNATURE SECTION ==================== -->
@@ -4516,8 +4587,8 @@
             data-i="3">
           <img src="asset/Queen Products/Emerald-box.jpg" alt="Queen’s Emerald fragrance bottle" class="" loading="lazy"
             data-i="4">
-          <img src="asset/Queen Products/Ruby-box.jpg" alt="Queen’s Ruby fragrance bottle" class=""
-            loading="lazy" data-i="5">
+          <img src="asset/Queen Products/Ruby-box.jpg" alt="Queen’s Ruby fragrance bottle" class="" loading="lazy"
+            data-i="5">
           <span class="fs-big" id="fs-big" aria-hidden="true">01</span>
         </div>
         <div class="fs-list" role="tablist" aria-orientation="vertical" aria-label="Choose a fragrance">
@@ -4647,7 +4718,14 @@
                     crown, for the woman who is elegant, self-assured and a little mysterious.</p>
                   <div style="display:flex;gap:12px;align-items:center;">
                     <button class="fs-btn"
-                      onclick="addItem('Queen’s Emerald', 99.95, 129.95, 'asset/Queen Products/Emerald-box.jpg', '100ml')">BUY NOW <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-left:5px;"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg></button>
+                      onclick="addItem('Queen’s Emerald', 99.95, 129.95, 'asset/Queen Products/Emerald-box.jpg', '100ml')">BUY
+                      NOW <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                        style="vertical-align:middle;margin-left:5px;">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                      </svg></button>
                   </div>
                 </div>
               </div>
@@ -4667,7 +4745,14 @@
                     gold, for the woman who is bold without being loud.</p>
                   <div style="display:flex;gap:12px;align-items:center;">
                     <button class="fs-btn"
-                      onclick="addItem('Queen’s Ruby', 99.95, 129.95, 'asset/Queen Products/Ruby-box.jpg', '100ml')">BUY NOW <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-left:5px;"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg></button>
+                      onclick="addItem('Queen’s Ruby', 99.95, 129.95, 'asset/Queen Products/Ruby-box.jpg', '100ml')">BUY
+                      NOW <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                        style="vertical-align:middle;margin-left:5px;">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                      </svg></button>
                   </div>
                 </div>
               </div>
@@ -4681,11 +4766,17 @@
     <div class="fs-mob-container">
       <div class="fs-mob-gender-nav">
         <button class="fs-mob-gender-btn active" id="fsMobBtnHim" onclick="fsMobSetTab('him')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 16V9l4 4 3-7 3 7 4-4v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2z"></path></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 16V9l4 4 3-7 3 7 4-4v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2z"></path>
+          </svg>
           For Him (3)
         </button>
         <button class="fs-mob-gender-btn" id="fsMobBtnHer" onclick="fsMobSetTab('her')">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="6 3 18 3 22 9 12 22 2 9 6 3"></polygon></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="6 3 18 3 22 9 12 22 2 9 6 3"></polygon>
+          </svg>
           For Her (3)
         </button>
       </div>
@@ -4699,17 +4790,27 @@
         <div class="fs-mob-body">
           <h3 class="fs-mob-title" id="fsMobCardTitle">King’s Gold</h3>
           <div class="fs-mob-notes-pill" id="fsMobCardNotes">Warm Radiant Amber · Royal Musk</div>
-          <p class="fs-mob-desc" id="fsMobCardDesc">Warm, radiant and made to be noticed. Gemstone-cut glass crowned in gold, for the man who leads with quiet confidence.</p>
-          <button class="btn" id="fsMobCardCta" onclick="fsMobCardBuy()" style="width:100%;max-width:280px;padding:14px 20px;font-size:13px;">
+          <p class="fs-mob-desc" id="fsMobCardDesc">Warm, radiant and made to be noticed. Gemstone-cut glass crowned in
+            gold, for the man who leads with quiet confidence.</p>
+          <button class="btn" id="fsMobCardCta" onclick="fsMobCardBuy()"
+            style="width:100%;max-width:280px;padding:14px 20px;font-size:13px;">
             BUY NOW
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-left:4px;"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-left:4px;">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
           </button>
         </div>
       </div>
 
       <div class="fs-mob-nav-bar">
         <button class="fs-mob-nav-arrow" onclick="fsMobCardNav(-1)" aria-label="Previous Fragrance">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
         </button>
         <div class="fs-mob-dots-row" id="fsMobDotsRow">
           <button class="fs-mob-page-dot active" onclick="fsMobCardJump(0)" aria-label="Slide 1"></button>
@@ -4717,7 +4818,10 @@
           <button class="fs-mob-page-dot" onclick="fsMobCardJump(2)" aria-label="Slide 3"></button>
         </div>
         <button class="fs-mob-nav-arrow" onclick="fsMobCardNav(1)" aria-label="Next Fragrance">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
         </button>
       </div>
     </div>
@@ -5186,7 +5290,7 @@
       }, { passive: true });
     })();
 
-</script>
+  </script>
 
   <section class="sec" id="faq">
     <div class="fq">
@@ -5196,35 +5300,42 @@
           Contact us</a>
       </div>
       <div id="fql">
-        <div class="fi on"><button aria-expanded="true"><span class="n">01</span><span class="t">What sizes do you offer?</span><i class="c"></i></button>
+        <div class="fi on"><button aria-expanded="true"><span class="n">01</span><span class="t">What sizes do you
+              offer?</span><i class="c"></i></button>
           <div class="a">
             <div>
               <p>Every fragrance comes in 50ml (A$59.95) and 100ml (A$99.95).</p>
             </div>
           </div>
         </div>
-        <div class="fi"><button aria-expanded="false"><span class="n">02</span><span class="t">How much is shipping?</span><i class="c"></i></button>
+        <div class="fi"><button aria-expanded="false"><span class="n">02</span><span class="t">How much is
+              shipping?</span><i class="c"></i></button>
           <div class="a">
             <div>
               <p>Shipping options and rates are shown at checkout.</p>
             </div>
           </div>
         </div>
-        <div class="fi"><button aria-expanded="false"><span class="n">03</span><span class="t">What fragrances do you offer?</span><i class="c"></i></button>
+        <div class="fi"><button aria-expanded="false"><span class="n">03</span><span class="t">What fragrances do you
+              offer?</span><i class="c"></i></button>
           <div class="a">
             <div>
-              <p>Six original fragrances: King’s Gold, King’s Silver and King’s Bronze for him, and Queen’s Sapphire, Queen’s Emerald and Queen’s Ruby for her.</p>
+              <p>Six original fragrances: King’s Gold, King’s Silver and King’s Bronze for him, and Queen’s Sapphire,
+                Queen’s Emerald and Queen’s Ruby for her.</p>
             </div>
           </div>
         </div>
-        <div class="fi"><button aria-expanded="false"><span class="n">04</span><span class="t">Who creates the fragrances?</span><i class="c"></i></button>
+        <div class="fi"><button aria-expanded="false"><span class="n">04</span><span class="t">Who creates the
+              fragrances?</span><i class="c"></i></button>
           <div class="a">
             <div>
-              <p>Every fragrance is an original formulation, handcrafted in small batches in Perth by our founder, Hossam Hamida.</p>
+              <p>Every fragrance is an original formulation, handcrafted in small batches in Perth by our founder,
+                Hossam Hamida.</p>
             </div>
           </div>
         </div>
-        <div class="fi"><button aria-expanded="false"><span class="n">05</span><span class="t">Where are your fragrances made?</span><i class="c"></i></button>
+        <div class="fi"><button aria-expanded="false"><span class="n">05</span><span class="t">Where are your fragrances
+              made?</span><i class="c"></i></button>
           <div class="a">
             <div>
               <p>Handcrafted in Perth, Western Australia.</p>
@@ -5284,10 +5395,10 @@
           <ul>
             <li><a href="#contact" onclick="toast('Free shipping across Australia on orders A$150+')">Shipping &amp;
                 Delivery</a></li>
-            <li><a href="#contact" onclick="toast('30-day return and exchange')">Returns &amp; Refunds</a></li>
-            <li><a href="#contact" onclick="toast('Your privacy and data are kept confidential')">Privacy Policy</a>
+            <li><a href="#contact" onclick="toast('Our returns policy will be published before launch.')">Returns &amp; Refunds</a></li>
+            <li><a href="#contact" onclick="toast('Policy coming soon.')">Privacy Policy</a>
             </li>
-            <li><a href="#contact" onclick="toast('Terms of Service')">Terms of Service</a></li>
+            <li><a href="#contact" onclick="toast('Policy coming soon.')">Terms of Service</a></li>
           </ul>
         </div>
       </div>
@@ -5315,7 +5426,7 @@
     </svg></a>
   <div class="toast" id="toast"></div>
 
-  
+
   <!-- Quick View Modal (Matches user uploaded design) -->
   <div class="qv-overlay" id="qvOverlay" onclick="if(event.target===this)closeQv()">
     <div class="qv-modal" id="qvModal">
@@ -5344,8 +5455,10 @@
           </div>
           <button class="qv-add-btn" onclick="qvAddToCart()">
             ADD TO CART
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
               <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
             </svg>
           </button>
@@ -5420,7 +5533,9 @@
       <button class="btn" onclick="checkout()"
         style="width:100%;font-size:14px;letter-spacing:0.1em;border-radius:4px;padding:15px 24px;">ORDER NOW</button>
       <div style="text-align:center;margin-top:12px;">
-        <img src="asset/footer payment icon.png" alt="Secure Payment Methods: Visa, Mastercard, Amex, Apple Pay, Google Pay" style="max-width:240px;width:100%;height:auto;display:inline-block;border-radius:4px;">
+        <img src="asset/footer payment icon.png"
+          alt="Secure Payment Methods: Visa, Mastercard, Amex, Apple Pay, Google Pay"
+          style="max-width:240px;width:100%;height:auto;display:inline-block;border-radius:4px;">
       </div>
     </footer>
   </aside>
@@ -5446,14 +5561,83 @@
     function drawer(o) { $('dr').classList.toggle('on', o); $('ov').classList.toggle('on', o); document.body.style.overflow = o ? 'hidden' : '' }
     addEventListener('scroll', () => $('hd').classList.toggle('sc', scrollY > 40), { passive: true });
 
-    /* hero */
-    (function () {
-      const h = $('hero'), sl = [...h.querySelectorAll('.sl')], box = h.querySelector('.dots'); let cur = 0;
-      sl.forEach((_, i) => { const b = document.createElement('button'); b.setAttribute('aria-label', 'Slide ' + (i + 1)); b.innerHTML = '<i></i>'; if (!i) b.className = 'on'; b.onclick = () => heroGo(i); b.addEventListener('animationend', () => go((cur + 1) % sl.length)); box.appendChild(b) });
-      const d = [...box.children];
-      function go(i) { if (i === cur) return; const n = sl[i], o = sl[cur]; sl.forEach(s => s.classList.remove('pv')); n.style.transition = 'none'; n.classList.remove('on'); void n.offsetWidth; n.style.transition = ''; o.classList.remove('on'); o.classList.add('pv'); n.classList.add('on'); d.forEach(x => x.classList.remove('on')); void d[i].offsetWidth; d[i].classList.add('on'); cur = i }
-      let x0 = null; h.addEventListener('touchstart', e => x0 = e.touches[0].clientX, { passive: true });
-      h.addEventListener('touchend', e => { if (x0 === null) return; const v = e.changedTouches[0].clientX - x0; x0 = null; if (Math.abs(v) > 50) go(v < 0 ? (cur + 1) % sl.length : (cur - 1 + sl.length) % sl.length) });
+    /* Single Consolidated Hero Slider Engine with Dots & Touch */
+    let heroCur = 0;
+    let heroTimer = null;
+
+    function heroGo(nextIdx) {
+      const h = $('hero');
+      if (!h) return;
+      const slides = h.querySelectorAll('.sl');
+      const dots = h.querySelectorAll('.dots button');
+      if (!slides.length) return;
+
+      nextIdx = (nextIdx + slides.length) % slides.length;
+      if (nextIdx === heroCur) return;
+
+      const prevSlide = slides[heroCur];
+      const nextSlide = slides[nextIdx];
+
+      slides.forEach(s => s.classList.remove('pv'));
+      if (prevSlide) {
+        prevSlide.classList.remove('on');
+        prevSlide.classList.add('pv');
+      }
+      if (nextSlide) {
+        nextSlide.style.transition = 'none';
+        nextSlide.classList.remove('on');
+        void nextSlide.offsetWidth;
+        nextSlide.style.transition = '';
+        nextSlide.classList.add('on');
+      }
+
+      dots.forEach((d, idx) => {
+        d.classList.toggle('on', idx === nextIdx);
+      });
+
+      heroCur = nextIdx;
+      resetHeroTimer();
+    }
+
+    function heroStep(dir) {
+      heroGo(heroCur + dir);
+    }
+
+    function resetHeroTimer() {
+      if (heroTimer) clearInterval(heroTimer);
+      heroTimer = setInterval(() => {
+        heroStep(1);
+      }, 5000);
+    }
+
+    // Initialize Hero Dots & Touch Swipe
+    (function initHero() {
+      const h = $('hero');
+      if (!h) return;
+      const slides = h.querySelectorAll('.sl');
+      const box = h.querySelector('.dots');
+      if (box && slides.length) {
+        box.innerHTML = '';
+        slides.forEach((_, i) => {
+          const b = document.createElement('button');
+          b.setAttribute('aria-label', 'Slide ' + (i + 1));
+          b.innerHTML = '<i></i>';
+          if (!i) b.className = 'on';
+          b.onclick = () => heroGo(i);
+          box.appendChild(b);
+        });
+      }
+
+      let x0 = null;
+      h.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+      h.addEventListener('touchend', e => {
+        if (x0 === null) return;
+        const diff = e.changedTouches[0].clientX - x0;
+        x0 = null;
+        if (Math.abs(diff) > 40) heroStep(diff < 0 ? 1 : -1);
+      }, { passive: true });
+
+      resetHeroTimer();
     })();
 
     /* collection rail */
@@ -5492,7 +5676,7 @@
       }).join('');
       r.scrollLeft = 0; arrows();
     }
-    function cardSize(sel, id) { const p = prods.find(x => x.id === id), s = p.sizes[+sel.value], c = sel.closest('.cd'); c.querySelector('.pr b').textContent = money(s[1]); c.querySelector('.pr s').textContent = money(s[2]);/* tag removed */ }
+    function cardSize(sel, id) { const p = prods.find(x => x.id === id), s = p.sizes[+sel.value], c = sel.closest('.cd'); if(c) { const bEl = c.querySelector('.pr b'); if(bEl) bEl.textContent = money(s[1]); const sEl = c.querySelector('.pr s'); if(sEl) sEl.textContent = money(s[2]); } }
     function cardAdd(b, id) { const p = prods.find(x => x.id === id), s = p.sizes[+b.closest('.cd').querySelector('select').value]; addItem(p.name, s[1], s[2], p.img, s[0]) }
     function slide(d) {
       const r = $('rail');
@@ -5525,7 +5709,7 @@
     });
 
     /* cart */
-    let cart = [{ id: 1, name: 'King’s Gold', img: P + 'Kings Products/Gold.png', opts: ['50ml', '100ml'], opt: '100ml', price: 99.95, compare: 129.95, qty: 1 }];
+    let cart = [];
     const upsell = [
       { name: 'Queen’s Sapphire', img: P + 'Queen Products/Sapphire.png', price: 59.95, compare: 74.95, opt: '50ml', sizes: [['50ml', 59.95, 74.95], ['100ml', 99.95, 129.95]] },
       { name: 'Queen’s Ruby', img: P + 'Queen Products/ruby-perfume (1).png', price: 59.95, compare: 74.95, opt: '50ml', sizes: [['50ml', 59.95, 74.95], ['100ml', 99.95, 129.95]] },
@@ -5652,7 +5836,7 @@
 
     function renderCart() {
       const n = cart.reduce((a, i) => a + i.qty, 0), tot = cart.reduce((a, i) => a + i.price * i.qty, 0), old = cart.reduce((a, i) => a + i.compare * i.qty, 0), sv = old - tot;
-      $('kt').textContent = `Your Cart (${n} items)`; document.querySelectorAll('.cn').forEach(e => e.textContent = n);
+      $('kt').textContent = `Your Cart (${n} items)`; document.querySelectorAll('.cn').forEach(e => { e.textContent = n; e.style.display = n > 0 ? 'inline-flex' : 'none'; });
       $('ki').innerHTML = cart.map((i, k) => `<div class="ci"><img src="${i.img}" alt="${i.name}"><div><p>${i.name}</p>
    <select class="sz" aria-label="Size" onchange="cartSize(${k},this.value)">${i.opts.map(o => `<option ${o === i.opt ? 'selected' : ''}>${o}</option>`).join('')}</select></div>
    <div class="ci-r"><div><b>${money(i.price)}</b></div>
@@ -5676,8 +5860,8 @@
 `).join('');
       $('ksv').textContent = `${money(sv)} Saved so far!`; $('ksv').style.display = sv > 0 ? '' : 'none';
       $('ko').textContent = sv > 0 ? money(old) : ''; $('kn').textContent = money(tot); $('kp').textContent = ''; $('kp').style.display = 'none';
-      $('ks2').textContent = tot >= FREE ? '🚚 Free shipping included' : `🚚 ${money(FREE - tot)} away from free shipping`;
-      $('kb').innerHTML = `<div><span>Subtotal</span><span>${money(old)}</span></div><div><span>Discount</span><span>−${money(sv)}</span></div><div><span>Shipping</span><span>${tot >= FREE ? 'Free' : 'Calculated at checkout'}</span></div>`;
+      
+      $('kb').innerHTML = `<div><span>Subtotal</span><span>${money(old)}</span></div><div><span>Discount</span><span>−${money(sv)}</span></div><div><span>Shipping</span><span>Calculated at checkout</span></div>`;
     }
     function qty(k, d) { cart[k].qty += d; if (cart[k].qty < 1) cart.splice(k, 1); renderCart() }
     function cartSize(k, o) { const i = cart[k]; i.opt = o; if (o === '100ml') { i.price = 99.95; i.compare = 129.95 } else if (o === '50ml') { i.price = 59.95; i.compare = 74.95 } renderCart() }
@@ -5722,13 +5906,22 @@
     }
 
     function addUp(k) { const u = upsell[k]; addItem(u.name, u.price, u.compare, u.img, u.opt || '50ml') }
-        function openCart(v) {
+    
+    // Esc key close handler for Quick View & Cart Drawer
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        closeQv();
+        openCart(false);
+      }
+    });
+
+    function openCart(v) {
       const kc = $('kc'), kv = $('kv');
       if (kc) kc.classList.toggle('on', v);
       if (kv) kv.classList.toggle('on', v);
       document.body.style.overflow = v ? 'hidden' : '';
     }
-    function checkout() { cart.length ? alert('Proceeding to secure Australian checkout (Shopify Payments / Afterpay)…') : alert('Your cart is empty.') }
+    function checkout() { cart.length ? toast('Online checkout will be connected before launch.') : toast('Your cart is empty.') }
 
     window.addEventListener('scroll', () => {
       const btt = document.getElementById('backToTop');
@@ -5737,7 +5930,7 @@
       }
     }, { passive: true });
 
-    
+
     /* Quick View Logic */
     let qvCurProduct = null;
     let qvCurSize = '50ml';
@@ -5792,7 +5985,7 @@
       $('qvQtyVal').textContent = qvCurQty;
     }
 
-        function qvAddToCart() {
+    function qvAddToCart() {
       if (!qvCurProduct) return;
       const s = qvCurProduct.sizes.find(x => x[0] === qvCurSize) || qvCurProduct.sizes[0];
       closeQv();
