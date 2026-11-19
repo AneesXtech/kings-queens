@@ -3653,6 +3653,57 @@
       }
     }
 
+
+    /* Clean Site Max-Width Containment */
+    .wrap, .fs-track, .fs-story-inner, .fq, .fg, .bb {
+      max-width: 1240px !important;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      width: 100% !important;
+    }
+    .sec {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    @media(max-width: 768px) {
+      .sec {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
+
+
+    /* Mobile Product Slider Arrows */
+    .rw-mob-nav {
+      display: none;
+    }
+    @media(max-width: 860px) {
+      .rw-mob-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        margin-top: 14px;
+      }
+      .rw-mob-arrow {
+        width: 44px;
+        height: 44px;
+        border-radius: 4px;
+        border: 1px solid rgba(212, 175, 55, 0.35);
+        background: #1A1A1A;
+        color: #D4AF37;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .rw-mob-arrow:active {
+        background: #D4AF37;
+        color: #000000;
+      }
+    }
+
 </style>
 </head>
 
@@ -3699,7 +3750,7 @@
       <div class="mh">
         <button class="bg" aria-label="Menu" onclick="drawer(true)"><i></i><i></i><i></i></button>
         <a href="#" class="logo" aria-label="Kings &amp; Queens"><img src="asset/logo.png" alt="Kings &amp; Queens"
-            style="height:34px"></a>
+            style="height:44px"></a>
         <div class="ics">
           <button class="ib" aria-label="Search" onclick="drawer(true);setTimeout(()=>$('mq').focus(),300)"><svg
               viewBox="0 0 24 24">
@@ -3787,6 +3838,14 @@
       </div>
       <div class="rw"><button class="ar p" aria-label="Previous" onclick="slide(-1)">‹</button>
         <div class="rail" id="rail"></div><button class="ar n" aria-label="Next" onclick="slide(1)">›</button>
+      </div>
+      <div class="rw-mob-nav">
+        <button class="rw-mob-arrow" onclick="slide(-1)" aria-label="Previous product">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <button class="rw-mob-arrow" onclick="slide(1)" aria-label="Next product">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
       </div>
     </div>
   </section>
@@ -4259,21 +4318,23 @@
 
     .fs-story-media {
       position: relative;
+      border-radius: 6px;
       overflow: hidden;
-      width: 100%;
-      height: 100%;
-      max-height: 460px;
-      border-left: 1px solid rgba(212, 175, 55, 0.2);
+      min-height: 520px;
+      max-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .fs-story-media img {
       width: 100%;
       height: 100%;
-      max-height: 800px;
+      min-height: 520px;
+      max-height: 600px;
       object-fit: cover;
-      object-position: center;
       display: block;
-      transform: none !important;
+      border-radius: 6px;
     }
 
     @media(max-width:860px) {
@@ -4288,17 +4349,25 @@
       }
 
       .fs-story-media {
-        order: -1;
-        height: 250px;
-        max-height: 260px;
-        border-left: none;
-        border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-      }
+      position: relative;
+      border-radius: 6px;
+      overflow: hidden;
+      min-height: 520px;
+      max-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
       .fs-story-media img {
-        height: 250px;
-        max-height: 260px;
-      }
+      width: 100%;
+      height: 100%;
+      min-height: 520px;
+      max-height: 600px;
+      object-fit: cover;
+      display: block;
+      border-radius: 6px;
+    }
     }
   </style>
 
@@ -4320,9 +4389,9 @@
             data-i="2">
           <img src="asset/Queen Products/Sapphire.png" alt="Queen’s Sapphire fragrance bottle" class="" loading="lazy"
             data-i="3">
-          <img src="asset/Queen Products/Emerald (1).png" alt="Queen’s Emerald fragrance bottle" class="" loading="lazy"
+          <img src="asset/Queen Products/Emerald-box.jpg" alt="Queen’s Emerald fragrance bottle" class="" loading="lazy"
             data-i="4">
-          <img src="asset/Queen Products/ruby-perfume (1).png" alt="Queen’s Ruby fragrance bottle" class=""
+          <img src="asset/Queen Products/Ruby-box.jpg" alt="Queen’s Ruby fragrance bottle" class=""
             loading="lazy" data-i="5">
           <span class="fs-big" id="fs-big" aria-hidden="true">01</span>
         </div>
@@ -4453,7 +4522,7 @@
                     crown, for the woman who is elegant, self-assured and a little mysterious.</p>
                   <div style="display:flex;gap:12px;align-items:center;">
                     <button class="fs-btn"
-                      onclick="addItem('Queen’s Emerald', 99.95, 129.95, 'asset/Queen Products/Emerald (1).png', '100ml')">Add
+                      onclick="addItem('Queen’s Emerald', 99.95, 129.95, 'asset/Queen Products/Emerald-box.jpg', '100ml')">Add
                       to Cart · A$99.95</button>
                   </div>
                 </div>
@@ -4474,7 +4543,7 @@
                     gold, for the woman who is bold without being loud.</p>
                   <div style="display:flex;gap:12px;align-items:center;">
                     <button class="fs-btn"
-                      onclick="addItem('Queen’s Ruby', 99.95, 129.95, 'asset/Queen Products/ruby-perfume (1).png', '100ml')">Add
+                      onclick="addItem('Queen’s Ruby', 99.95, 129.95, 'asset/Queen Products/Ruby-box.jpg', '100ml')">Add
                       to Cart · A$99.95</button>
                   </div>
                 </div>
@@ -4549,7 +4618,7 @@
       </div>
       <!-- Right Column: Image (Opposite to signature!) -->
       <div class="fs-story-media">
-        <img src="asset/about-us.png" alt="Kings &amp; Queens Fine Fragrance Presentation" loading="lazy">
+        <img src="asset/about-us-hero.jpg" alt="Kings &amp; Queens Fine Fragrance Presentation" loading="lazy">
       </div>
     </div>
   </section>
@@ -4911,8 +4980,8 @@
       ],
       her: [
         { id: 201, title: "Queen’s Sapphire", tag: "For Her", notes: "Luminous Floral · Rare Woods", desc: "A fragrance of royal beauty, strength and grace. Gemstone-cut glass crowned in gold, for the woman who carries calm authority.", img: "asset/Queen Products/Sapphire.png", price: 59.95, compare: 74.95 },
-        { id: 203, title: "Queen’s Emerald", tag: "For Her", notes: "Mystic Luxe · Velvety Green", desc: "Timeless luxe, mystique and poise. Glows green beneath its jewelled crown, for the woman who is self-assured and mysterious.", img: "asset/Queen Products/Emerald (1).png", price: 59.95, compare: 74.95 },
-        { id: 202, title: "Queen’s Ruby", tag: "For Her", notes: "Ruby Rose · Sultry Vanilla", desc: "Rich red and crowned in gold, for the woman who is bold without being loud. An unforgettable, magnetic presence.", img: "asset/Queen Products/ruby-perfume (1).png", price: 59.95, compare: 74.95 }
+        { id: 203, title: "Queen’s Emerald", tag: "For Her", notes: "Mystic Luxe · Velvety Green", desc: "Timeless luxe, mystique and poise. Glows green beneath its jewelled crown, for the woman who is self-assured and mysterious.", img: "asset/Queen Products/Emerald-box.jpg", price: 59.95, compare: 74.95 },
+        { id: 202, title: "Queen’s Ruby", tag: "For Her", notes: "Ruby Rose · Sultry Vanilla", desc: "Rich red and crowned in gold, for the woman who is bold without being loud. An unforgettable, magnetic presence.", img: "asset/Queen Products/Ruby-box.jpg", price: 59.95, compare: 74.95 }
       ]
     };
 
@@ -5117,7 +5186,7 @@
       </div>
     </div>
     <div class="bb"><span>© 2026 Kings &amp; Queens Fine Fragrances. All rights reserved.</span><span><img
-          src="asset/payment-methods.png" alt="Payment methods"
+          src="asset/footer payment icon.png" alt="Payment methods"
           style="height:26px;vertical-align:middle;object-fit:contain;border-radius:3px;"></span></div>
   </footer>
 
@@ -5234,7 +5303,7 @@
       <button class="btn" onclick="checkout()"
         style="width:100%;font-size:14px;letter-spacing:0.1em;border-radius:4px;padding:15px 24px;">ORDER NOW</button>
       <div style="text-align:center;margin-top:12px;">
-        <img src="asset/payment-methods.png" alt="Secure Payment Methods: Visa, Mastercard, Amex, Apple Pay, Google Pay" style="max-width:240px;width:100%;height:auto;display:inline-block;border-radius:4px;">
+        <img src="asset/footer payment icon.png" alt="Secure Payment Methods: Visa, Mastercard, Amex, Apple Pay, Google Pay" style="max-width:240px;width:100%;height:auto;display:inline-block;border-radius:4px;">
       </div>
     </footer>
   </aside>
