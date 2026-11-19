@@ -3655,7 +3655,7 @@
 
 
     /* Clean Site Max-Width Containment */
-    .wrap, .fs-track, .fq, .fg, .bb {
+    .wrap, .fq, .fg, .bb {
       max-width: 1240px !important;
       margin-left: auto !important;
       margin-right: auto !important;
@@ -3764,13 +3764,74 @@
       }
     }
 
+
+    /* ============================================================
+       FIND YOUR SIGNATURE (6 TRIGGERS): 100% FULL-WIDTH EDGE-TO-EDGE
+    ============================================================ */
+    .fs {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      background: #000000 !important;
+    }
+    .fs-hd {
+      max-width: 1240px !important;
+      margin: 0 auto 30px !important;
+      padding: 60px 20px 0 !important;
+      text-align: center !important;
+    }
+    .fs-track {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    .fs-stage {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      display: grid !important;
+      grid-template-columns: 1fr 1fr !important;
+      height: calc(100vh - var(--hh, 64px)) !important;
+      min-height: 580px !important;
+    }
+    .fs-img {
+      width: 100% !important;
+      height: 100% !important;
+      background: #FFFFFF !important;
+      position: relative !important;
+    }
+    .fs-img img {
+      width: 100% !important;
+      height: 100% !important;
+      max-height: 85vh !important;
+      object-fit: contain !important;
+      background: #FFFFFF !important;
+    }
+    .fs-list {
+      width: 100% !important;
+      padding: clamp(30px, 4vw, 60px) clamp(30px, 5vw, 90px) !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: center !important;
+      background: #0A0A0A !important;
+      border-left: 1px solid rgba(212, 175, 55, 0.2) !important;
+    }
+    @media(max-width: 860px) {
+      .fs-track,
+      .fs-stage {
+        display: none !important;
+      }
+    }
+
 </style>
 </head>
 
 <body>
 
-  <div class="ann"><a href="#shop" onclick="tab('him')">AUSTRALIA-WIDE DELIVERY · HANDCRAFTED EXTRAIT DE PARFUM 40%</a>
-  </div>
+  <div class="ann"><a href="#shop" onclick="tab('him')">HANDCRAFTED IN PERTH, WESTERN AUSTRALIA · DISCOVER KINGS &amp; QUEENS</a></div>
 
   <div class="hw">
     <header class="hd" id="hd">
@@ -4739,8 +4800,8 @@
               </svg></div><span>Extrait 04</span>
           </div>
           <div>
-            <h3>40% Oil Concentration</h3>
-            <p>Every bottle is formulated at 40% Extrait concentration for unmatched longevity and sillage.</p>
+            <h3>Six Original Fragrances</h3>
+            <p>Three for Kings, three for Queens, each in 50ml and 100ml.</p>
           </div>
         </article>
       </div>
@@ -5135,41 +5196,35 @@
           Contact us</a>
       </div>
       <div id="fql">
-        <div class="fi on"><button aria-expanded="true"><span class="n">01</span><span class="t">What sizes do you
-              offer?</span><i class="c"></i></button>
+        <div class="fi on"><button aria-expanded="true"><span class="n">01</span><span class="t">What sizes do you offer?</span><i class="c"></i></button>
           <div class="a">
             <div>
               <p>Every fragrance comes in 50ml (A$59.95) and 100ml (A$99.95).</p>
             </div>
           </div>
         </div>
-        <div class="fi"><button aria-expanded="false"><span class="n">02</span><span class="t">Is shipping
-              free?</span><i class="c"></i></button>
+        <div class="fi"><button aria-expanded="false"><span class="n">02</span><span class="t">How much is shipping?</span><i class="c"></i></button>
           <div class="a">
             <div>
-              <p>Yes, free shipping across Australia on orders over A$150.</p>
+              <p>Shipping options and rates are shown at checkout.</p>
             </div>
           </div>
         </div>
-        <div class="fi"><button aria-expanded="false"><span class="n">03</span><span class="t">Can I pay with
-              Afterpay?</span><i class="c"></i></button>
+        <div class="fi"><button aria-expanded="false"><span class="n">03</span><span class="t">What fragrances do you offer?</span><i class="c"></i></button>
           <div class="a">
             <div>
-              <p>Yes, Afterpay is available at checkout, so you can split your order into instalments.</p>
+              <p>Six original fragrances: King’s Gold, King’s Silver and King’s Bronze for him, and Queen’s Sapphire, Queen’s Emerald and Queen’s Ruby for her.</p>
             </div>
           </div>
         </div>
-        <div class="fi"><button aria-expanded="false"><span class="n">04</span><span class="t">What is the fragrance
-              concentration?</span><i class="c"></i></button>
+        <div class="fi"><button aria-expanded="false"><span class="n">04</span><span class="t">Who creates the fragrances?</span><i class="c"></i></button>
           <div class="a">
             <div>
-              <p>All Kings &amp; Queens fragrances are crafted at an authentic 40% Extrait de Parfum concentration,
-                using premium artisanal oils for incredible sillage and 12+ hours of performance.</p>
+              <p>Every fragrance is an original formulation, handcrafted in small batches in Perth by our founder, Hossam Hamida.</p>
             </div>
           </div>
         </div>
-        <div class="fi"><button aria-expanded="false"><span class="n">05</span><span class="t">Where are your fragrances
-              made?</span><i class="c"></i></button>
+        <div class="fi"><button aria-expanded="false"><span class="n">05</span><span class="t">Where are your fragrances made?</span><i class="c"></i></button>
           <div class="a">
             <div>
               <p>Handcrafted in Perth, Western Australia.</p>
@@ -5269,7 +5324,7 @@
         <img id="qvImg" src="" alt="Product">
       </div>
       <div class="qv-content">
-        <div class="qv-sub">Kings &amp; Queens · Extrait de Parfum 40%</div>
+        <div class="qv-sub">Kings &amp; Queens · Eau de Parfum</div>
         <h2 class="qv-title" id="qvTitle"></h2>
         <div class="qv-rating">★ 5.0 / 5</div>
         <div class="qv-prices">
@@ -5311,7 +5366,7 @@
               <span>+</span>
             </button>
             <div class="qv-acc-body">
-              Free express shipping across Australia on orders over A$150. Dispatched within 24–48 business hours with live tracking.
+              Shipping options and rates are shown at checkout.
             </div>
           </div>
           <div class="qv-acc-item">
@@ -5320,7 +5375,7 @@
               <span>+</span>
             </button>
             <div class="qv-acc-body">
-              30-day royal satisfaction guarantee. Unopened bottles can be exchanged or refunded with complete peace of mind.
+              Our returns policy will be published before launch.
             </div>
           </div>
         </div>
